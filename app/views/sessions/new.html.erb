@@ -1,0 +1,5 @@
+<%= form_for @user, url: { controller: 'sessions', action: 'create' } do |f| %>
+  <%= f.label 'Select Your Name: ' %><br>
+  <%= f.collection_select :id, @users, :id, :name %><br><br>
+  <%= f.submit 'Sign in' %>
+<% end  %>

@@ -1,0 +1,17 @@
+<h2>Rides</h2>
+
+<ul>
+  <% @attractions.each do |attraction| %>
+    <% if current_user.admin? %>
+      <li><%= link_to "Show #{attraction.name}", attraction %></li>
+    <% else %>
+      <li><%= link_to "Go on #{attraction.name}", attraction %></li>
+    <% end %>
+    <li>Tickets: <%= attraction.tickets %></li>
+    <li>Nausea rating: <%= attraction.nausea_rating %></li>
+    <li>Happiness rating: <%= attraction.happiness_rating %></li>
+    <li>Min height:<%= attraction.min_height %></li><br>
+  <% end %>
+</ul>
+
+<%= link_to 'New Attraction', new_attraction_path %>

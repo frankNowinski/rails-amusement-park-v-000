@@ -23,12 +23,17 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-           <!--  nav here -->
+           <a class="navbar-brand" href="/attractions"/>Attractions</a>
+           <a class="navbar-brand" href="/signout"/>Log Out</a>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
+    <!-- messages  -->
+    <div id="messages">
+      <%= render 'layouts/messages' %>
+    </div>
     <!-- content -->
     <div class="container"  role="main">
       <%= yield %>
